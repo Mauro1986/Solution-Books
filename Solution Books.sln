@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryBooks", "LibraryBooks\LibraryBooks.csproj", "{6627C3B3-E69D-47E3-80EA-34C7BBB4DC55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUIBooks", "WinUIBooks\WinUIBooks.csproj", "{C6F5168D-3307-4084-AF11-7EF17EBCC053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6627C3B3-E69D-47E3-80EA-34C7BBB4DC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6627C3B3-E69D-47E3-80EA-34C7BBB4DC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6627C3B3-E69D-47E3-80EA-34C7BBB4DC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6627C3B3-E69D-47E3-80EA-34C7BBB4DC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F5168D-3307-4084-AF11-7EF17EBCC053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F5168D-3307-4084-AF11-7EF17EBCC053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F5168D-3307-4084-AF11-7EF17EBCC053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F5168D-3307-4084-AF11-7EF17EBCC053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37644B76-9AC7-4582-8EC1-94F3FB2262D8}
+	EndGlobalSection
+EndGlobal
