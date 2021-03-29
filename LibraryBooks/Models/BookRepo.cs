@@ -26,7 +26,7 @@ namespace LibraryBooks.Models
         {
             using (IDbConnection connection = new SqlConnection(Helper.Constr("Books")))
             {
-               return connection.Query<Book>("SELECT * FROM BOOK").ToList();
+               return connection.Query<Book>("SELECT * From Book").ToList();
             }
         }
 
@@ -34,10 +34,9 @@ namespace LibraryBooks.Models
         {
             using (IDbConnection connection = new SqlConnection(Helper.Constr("Books")))
             {
-                connection.Execute("UPDATE Book Set Title = @title, Author = @author, Price=@price, " +
-                    "Description=@description, CountryId=@countryid WHERE ID = @Id",
-                    new {Title=book.Title, Author = book.Author, Price=book.Price, 
-                        Description=book.Description, Countryid=book.CountryId, Id= book.Id});
+                connection.Execute("UPDATE Book SET Title=@title, Author=@author, " +
+                     "Price=@price, Description=@description, CountryId=@countryid WHERE ID = @Id",
+                     new { Title = book.Title, Author = book.Author, Price = book.Price, Description = book.Description, CountryId = book.CountryId, Id = book.Id });
             }
         }
     }

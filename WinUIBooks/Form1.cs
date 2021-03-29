@@ -62,6 +62,8 @@ namespace WinUIBooks
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Book book = new Book();
+
+            book.Id = int.Parse(lblId.Text);
             book.Title = txtTitle.Text;
             book.Author = txtAuthor.Text;
             book.Price = decimal.Parse(txtPrice.Text);
@@ -70,6 +72,7 @@ namespace WinUIBooks
 
             BookRepo repo = new BookRepo();
             repo.UpdateBook(book);
+            LoadBookst();
         }
 
         private void grdBooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
