@@ -57,5 +57,24 @@ namespace LibraryBooks.Models
                      new { Title = book.Title, Author = book.Author, Price = book.Price, Description = book.Description, CountryId = book.CountryId, Id = book.Id });
             }
         }
+
+        public List<Country> GetCountries()
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.Constr("Books")))
+            {
+                return connection.Query<Country>("SELECT * From Country").ToList();
+            }
+        }
+
+        public List<Book> GetAuthorsOfSelectedCountry(int id)
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.Constr("Books")))
+            {
+                //return connection.Query<Book>("SELECT * From Book Where Country ").ToList();
+                var list = connection.Query<Book>("SELECT Author from Book where CountryId=@id", 
+                    new { Id = id }).ToList();
+                return list;
+            }
+        }
     }
 }
