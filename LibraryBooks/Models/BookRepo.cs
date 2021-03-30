@@ -21,6 +21,24 @@ namespace LibraryBooks.Models
             }
         }
 
+        public void DeleteBook(int id)
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.Constr("Books")))
+            {
+                connection.Execute("DELETE FROM Book where Id=@id", new { Id = id });
+            }
+        }
+        public int AddBookReturnId(Book book)
+        {
+            string sql = "Insert INTO Book(Title,Author, Price, Description, CountryId)" +
+                    "VALUES(@Title,@Author, @Price, @Description, @CountryId);" +
+                    "SELECT CAST(SCOPE_IDENTITY() as int)";
+            using (IDbConnection connection = new SqlConnection(Helper.Constr("Books")))
+            {
+                var returnId = connection.Query<int>(sql, book).SingleOrDefault();
+                return returnId;
+            }
+        }
 
         public List<Book> GetBooks()
         {

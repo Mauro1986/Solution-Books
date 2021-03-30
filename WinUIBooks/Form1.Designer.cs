@@ -165,6 +165,7 @@ namespace WinUIBooks
             this.BtnDelete.TabIndex = 12;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnInsertandGetId
             // 
