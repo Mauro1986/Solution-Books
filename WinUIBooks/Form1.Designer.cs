@@ -95,7 +95,6 @@ namespace WinUIBooks
             this.lblDescription.Size = new System.Drawing.Size(109, 25);
             this.lblDescription.TabIndex = 3;
             this.lblDescription.Text = "Description";
-           // this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // txtTitle
             // 
@@ -134,7 +133,6 @@ namespace WinUIBooks
             this.grdBooks.RowTemplate.Height = 24;
             this.grdBooks.Size = new System.Drawing.Size(595, 216);
             this.grdBooks.TabIndex = 8;
-           // this.grdBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdBooks_CellContentClick);
             this.grdBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdBooks_CellDoubleClick);
             // 
             // lstAuthor
@@ -145,7 +143,6 @@ namespace WinUIBooks
             this.lstAuthor.Name = "lstAuthor";
             this.lstAuthor.Size = new System.Drawing.Size(595, 148);
             this.lstAuthor.TabIndex = 9;
-           // this.lstAuthor.SelectedIndexChanged += new System.EventHandler(this.lstAuthor_SelectedIndexChanged);
             // 
             // btnInsert
             // 
@@ -190,7 +187,7 @@ namespace WinUIBooks
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(30, -13);
+            this.lblId.Location = new System.Drawing.Point(30, -5);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(46, 17);
             this.lblId.TabIndex = 14;

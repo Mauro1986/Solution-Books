@@ -35,6 +35,9 @@ namespace WinUIBooks
             BookRepo repo = new BookRepo();
             grdBooks.DataSource = null;
             grdBooks.DataSource = repo.GetBooks();
+
+         // IList<Book> list = repo.GetBooks();  ////kan misschien handig zijn
+         // List<Book> list = repo.GetBooks();
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -70,7 +73,7 @@ namespace WinUIBooks
             book.Author = txtAuthor.Text;
             book.Price = decimal.Parse(txtPrice.Text);
             book.Description = txtDescription.Text;
-            book.CountryId = (int)CmbxCountry.SelectedValue;
+            book.CountryId = (int)CmbxCountry.SelectedValue;                        //dropdownmenu
 
             BookRepo repo = new BookRepo();
             repo.UpdateBook(book);
@@ -83,6 +86,8 @@ namespace WinUIBooks
             txtAuthor.Text = grdBooks.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtPrice.Text = grdBooks.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtDescription.Text = grdBooks.Rows[e.RowIndex].Cells[4].Value.ToString();
+            var countryId = grdBooks.Rows[e.RowIndex].Cells[5].Value.ToString();
+            CmbxCountry.SelectedIndex =  Convert.ToInt32(countryId)-1;                  //dropdownmenu!
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
